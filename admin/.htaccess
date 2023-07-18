@@ -1,0 +1,42 @@
+Options -indexes
+RewriteEngine On
+RewriteBase /eticaret/admin/
+RewriteRule ^liste/(.*)$ index.php?sayfa=liste&tablo=$1 [NC]
+RewriteRule ^modul-ekle$ index.php?sayfa=modul-ekle [NC]
+RewriteRule ^ekle/(.*)$ index.php?sayfa=ekle&tablo=$1 [NC]
+RewriteRule ^duzenle/(.*)/(.*)$ index.php?sayfa=duzenle&tablo=$1&ID=$2 [NC]
+RewriteRule ^sil/(.*)/(.*)$ index.php?sayfa=sil&tablo=$1&ID=$2 [NC]
+RewriteRule ^seo-ayarlari$ index.php?sayfa=seo-ayarlari [NC]
+RewriteRule ^iletisim-ayarlari$ index.php?sayfa=iletisim-ayarlari [NC]
+RewriteRule ^giris-yap$ login.php [NC]
+RewriteRule ^cikis$ index.php?sayfa=cikis [NC]
+
+RewriteRule ^banner-ekle$ index.php?sayfa=banner-ekle [NC]
+RewriteRule ^banner-duzenle/(.*)$ index.php?sayfa=banner-duzenle&ID=$1 [NC]
+RewriteRule ^banner-liste$ index.php?sayfa=banner-liste [NC]
+RewriteRule ^banner-sil/(.*)$ index.php?sayfa=banner-sil&ID=$1 [NC]
+
+RewriteRule ^kategori-liste$ index.php?sayfa=kategori-liste [NC]
+RewriteRule ^kategori-ekle$ index.php?sayfa=kategori-ekle [NC]
+RewriteRule ^kategori-duzenle/(.*)$ index.php?sayfa=kategori-duzenle&ID=$1 [NC]
+RewriteRule ^kategori-sil/(.*)$ index.php?sayfa=kategori-sil&ID=$1 [NC]
+
+
+
+RewriteRule ^urun-ekle$ index.php?sayfa=urun-ekle [NC]
+RewriteRule ^urun-liste$ index.php?sayfa=urun-liste [NC]
+RewriteRule ^urun-sil/(.*)$ index.php?sayfa=urun-sil&ID=$1 [NC]
+RewriteRule ^urun-duzenle/(.*)$ index.php?sayfa=urun-duzenle&ID=$1 [NC]
+RewriteRule ^resimler/(.*)/(.*)$ index.php?sayfa=resimler&tablo=$1&ID=$2 [NC]
+RewriteRule ^resim-sil/(.*)/(.*)/(.*)$ index.php?sayfa=resim-sil&tablo=$1&ID=$2&silinecekID=$3 [NC]
+RewriteRule ^urun-stok/(.*)$ index.php?sayfa=urun-stok&ID=$1 [NC]
+
+RewriteRule ^siparis-liste$ index.php?sayfa=siparis-liste [NC]
+RewriteRule ^siparis-detay/(.*)$ index.php?sayfa=siparis-detay&sipariskodu=$1 [NC]
+
+RewriteRule ^iade-liste$ index.php?sayfa=iade-liste [NC]
+RewriteRule ^iade-detay/(.*)$ index.php?sayfa=iade-detay&iadekodu=$1 [NC]
+
+
+RewriteRule ^yorumlar$ index.php?sayfa=yorumlar [NC]
+RewriteRule ^yorum-sil/(.*)$ index.php?sayfa=yorum-sil&ID=$1 [NC]

@@ -1,0 +1,41 @@
+Options -indexes
+RewriteEngine On
+RewriteBase /eticaret
+RewriteRule ^anasayfa/(.*)$ index.php [NC]
+RewriteRule ^kategori/(.*)$ index.php?sayfa=kategoriler&seflink=$1 [QSA]
+RewriteRule ^blog-detay/(.*)$ index.php?sayfa=blog-detay&seflink=$1 [NC]
+RewriteRule ^urun/(.*)$ index.php?sayfa=urun-detay&seflink=$1 [NC]
+RewriteRule ^sepet$ index.php?sayfa=sepet [NC]
+RewriteRule ^sepet-sil/(.*)/(.*)$ index.php?sayfa=sepet-sil&urunID=$1&varyasyonID=$2 [NC]
+RewriteRule ^sepet-sil/(.*)$ index.php?sayfa=sepet-sil&urunID=$1 [NC]
+RewriteRule ^sepet-sil$ index.php?sayfa=sepet-sil [NC]
+RewriteRule ^uyelik$ index.php?sayfa=uyelik [NC]
+RewriteRule ^hesabim$ index.php?sayfa=hesabim [NC]
+RewriteRule ^gizlilik-politikasi/(.*)$ index.php?sayfa=gizlilik-politikasi&seflink=$1 [NC]
+RewriteRule ^cikis-yap$ index.php?sayfa=cikis [NC]
+RewriteRule ^sifre-belirle/(.*)$ index.php?sayfa=sifre-belirle&seflink=$1 [NC]
+
+
+RewriteRule ^kurumsal/(.*)$ index.php?sayfa=kurumsal&seflink=$1 [NC]
+
+RewriteRule ^blog$ index.php?sayfa=bloglar [NC]
+
+RewriteRule ^odeme-tipi$ index.php?sayfa=odeme-tipi [NC]
+RewriteRule ^odeme-yap$ index.php?sayfa=odeme-yap [NC]
+RewriteRule ^odeme-sonuc$ index.php?sayfa=odeme-sonuc [NC]
+RewriteRule ^kk-odeme-sonuc$ kk-odeme-sonuc.php [NC]
+RewriteRule ^kk-kayit$ index.php?sayfa=kk-kayit [NC]
+
+RewriteRule ^siparislerim$ index.php?sayfa=siparislerim [NC]
+RewriteRule ^siparis-detay/(.*)$ index.php?sayfa=siparis-detay&sipariskodu=$1 [NC]
+RewriteRule ^siparis-takip$ index.php?sayfa=siparis-takip [NC]
+RewriteRule ^iadeler$ index.php?sayfa=iadeler [NC]
+RewriteRule ^iade-detay/(.*)$ index.php?sayfa=iade-detay&iadekodu=$1 [NC]
+
+RewriteRule ^iletisim$ index.php?sayfa=iletisim [NC]
+RewriteRule ^iletisim$ iletisim.php [L]
+
+RewriteRule ^favorilerim$ index.php?sayfa=favorilerim [NC]
+RewriteRule ^favori-sil/(.*)$ index.php?sayfa=favori-sil&ID=$1 [NC]
+
+
